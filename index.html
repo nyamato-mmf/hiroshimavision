@@ -18,26 +18,86 @@
 </head>
 
 <body class="container">
-  <h2 class="display-4 m-3">広島都心会議 未来ビジョン 基礎データ</h2>
-
   <div class="row">
-    <div class="col-3">
-      <select id="selectdata" class="form-select m-3" aria-label="Default select example">
-        <option selected value="./html/airports.html">指標を選択してください</option>
-        <option value="./html/airports.html">空港</option>
-        <option value="./html/listedcompanies.html">東証プライム上場企業</option>
-        <option value="./html/trams.html">路面電車</option>
-        <option value="./html/touristspots.html">観光地</option>
-        <option value="./html/highwaybus.html">高速バス</option>
-        <option value="./html/airporaccess.html">空港までの所要時間</option>
-      </select>
+    <h2 class="display-4 m-3">広島都心会議 未来ビジョン 基礎データ</h2>
+
+    <!-- 指標のセレクトリスト -->
+    <div class="row">
+      <div class="w-25">
+        <select id="selectdata" class="form-select m-3" aria-label="Default select example">
+          <option selected value="./html/airports.html">指標を選択してください</option>
+          <option value="./html/airports.html">空港</option>
+          <option value="./html/listedcompanies.html">東証プライム上場企業</option>
+          <option value="./html/trams.html">路面電車</option>
+          <option value="./html/touristspots.html">観光地</option>
+          <option value="./html/highwaybus.html">高速バス</option>
+          <option value="./html/airporaccess.html">空港までの所要時間</option>
+        </select>
+      </div>
     </div>
-    <div class="col-3"></div>
-    <div class="col-3"></div>
+
+    <!-- マップやグラフをiframeで表示 -->
+    <div class="ratio ratio-16x9 m-3">
+      <iframe src="./html/airports.html" frameborder="0" class="fullheight" id="targetframe"></iframe>
+    </div>
+
+    <!-- 指標一覧をtableで表示 -->
+    <div class="w-100 mx-auto">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">指標名</th>
+            <th scope="col">定義</th>
+            <th scope="col">出典</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>空港</td>
+            <td>各都市の最寄りの空港</td>
+            <td>各種ウェブサイト</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>東証プライム上場企業</td>
+            <td>日本証券取引所の東証プライム市場に上場している企業</td>
+            <td>日本証券取引所</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>路面電車</td>
+            <td>広島電鉄の路面電車の駅および路線図</td>
+            <td>広島電鉄株式会社ホームページ</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>観光地</td>
+            <td>TripAdvisorに掲載されている観光地</td>
+            <td>TripAdvisor</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>高速バス</td>
+            <td>NAVITIMEの高速バスページに掲載されているバス路線</td>
+            <td>NAVITIME</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>空港までの所要時間</td>
+            <td>各市役所から最寄りの空港までの所要時間（車もしくは電車のどちから早い方）</td>
+            <td>Google Map</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
-  <div class="ratio ratio-16x9 m-3">
-    <iframe src="./html/airports.html" frameborder="0" class="fullheight" id="targetframe"></iframe>
+
+  <div class="mx-auto" style="width: 200px;">
+    <small>@Mori Memorial Foundation</small>
   </div>
 
   <script>
